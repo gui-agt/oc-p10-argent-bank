@@ -6,7 +6,8 @@
     "start": "concurrently \"npm run dev:frontend\" \"npm run dev:backend\"",
     "dev:frontend": "npm run dev --prefix ArgentBank-Frontend/vite-app",
     "dev:backend": "npm run dev:server --prefix ArgentBank-Backend",
-    "populate-db": "npm run populate-db --prefix ArgentBank-Backend"
+    "populate-db": "npm run populate-db --prefix ArgentBank-Backend",
+    "install:all": "npm install --prefix ArgentBank-Backend && npm install --prefix ArgentBank-Frontend/vite-app"
   },
   "keywords": [],
   "author": "",
