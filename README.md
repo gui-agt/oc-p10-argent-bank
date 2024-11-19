@@ -24,7 +24,7 @@ Clone this repository to your local machine:
 
 ```bash
 git clone git@github.com:gui-agt/oc-p10-argent-bank.git
-cd <folder-name>
+cd <oc-p10-argent-bank>
 ```
 
 ## Install dependencies for both backend and frontend:
