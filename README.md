@@ -33,12 +33,6 @@ cd <folder-name>
 npm run install:all
 ```
 
-## Initialize the database:
-
-```bash
-npm run setup:db
-```
-
 ## Running the Application
 
 To start both the backend and frontend servers, run:
@@ -47,9 +41,15 @@ To start both the backend and frontend servers, run:
 npm run start
 ```
 
+## Initialize the database:
+
+```bash
+npm run populate-db
+```
+
 ### Active Servers:
 Backend is available at: http://localhost:3001
-Frontend is available at: http://localhost:3000
+Frontend is available at: http://localhost:5173
 
 ## Populated Database Data
 
