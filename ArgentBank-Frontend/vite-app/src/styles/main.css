@@ -74,6 +74,31 @@ html {
   width: 200px;
 }
 
+.main-nav-item-username, .sign-out-button {
+  background-color: transparent;
+  border: none;
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  font-weight: bold;
+  font-size: 1rem;
+  text-decoration: none;
+  color: #2C3E50;
+  cursor: pointer;
+}
+
+.main-nav-item-username {
+  margin-right: 0.5rem;
+  text-decoration: none;
+}
+
+.main-nav a {
+  text-decoration: none;
+}
+
+.fa-user-circle {
+  margin-right: 0.3rem;
+}
+
 .hero {
   background-image: url('../assets/bank-tree.jpeg');
   background-position: 0 -50px;
@@ -177,6 +202,11 @@ html {
   margin: 0 auto;
   margin-top: 3rem;
   padding: 2rem;
+}
+
+.signInError {
+  color: red;
+  font-weight: bold;
 }
 
 .sign-in-icon {
@@ -293,4 +323,72 @@ html {
   .transaction-button {
     width: 200px;
   }
+}
+
+/* CSS userName form */
+.edit-profile-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 300px;
+  margin: 0 auto;
+  gap: 15px;
+}
+
+.edit-profile-form h1 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* align label and input on same line */
+.form-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.form-row label {
+  font-size: 1rem;
+  width: 30%;
+  text-align: left;
+}
+
+.form-row input {
+  width: 65%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #fff;
+  color: #2c3e50;
+}
+
+.edit-profile-form input:read-only {
+  background-color: #b3b2b2;
+  color: #4b4b4b;
+}
+
+/* Styles for buttons */
+.edit-profile-form button {
+  width: 48%;
+  padding: 10px;
+  font-size: 1rem;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.save-button, .cancel-button {
+  background-color:  #00bc77;
+}
+
+/* to align buttons */
+.button-group {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 15px;
 }

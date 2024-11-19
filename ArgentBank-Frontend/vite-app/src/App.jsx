@@ -7,6 +7,7 @@ import Header from './containers/Header'
 import Footer from './containers/Footer'
 
 import './styles/main.css'
+import PrivateRoute from './utils/PrivateRoute';
 
 const App = () => {
   return (
@@ -14,7 +15,7 @@ const App = () => {
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/profile" element={<Profile />} />
+        <Route path="/profile" element={<PrivateRoute><Profile /></PrivateRoute>} />
         <Route path="/login" element={<Login />} />
         <Route path="*" element={<Error />} />
       </Routes>
