@@ -3,7 +3,6 @@ import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 // Action to connect and get token
 export const logIn = createAsyncThunk('auth/logIn', async ({ username, password, rememberMe }, thunkAPI) => {
   try {
-    console.log(username, password)
     const response = await fetch('http://localhost:3001/api/v1/user/login', {
       method: 'POST',
       headers: {
@@ -18,13 +17,11 @@ export const logIn = createAsyncThunk('auth/logIn', async ({ username, password,
     // handle if api response isn't "ok"
     if (!response.ok) {
       const errorData = await response.json();
-      console.log(errorData)
       throw new Error(errorData.message || 'Erreur d\'utilisateur ou de mot de passe');
     }
 
     // get data from response
     const data = await response.json();
-    console.log(data.body.token)
     const token = data.body.token;
 
     // handle storage based on "rememberMe"
