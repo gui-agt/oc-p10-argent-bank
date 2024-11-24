@@ -72,6 +72,7 @@ const userSlice = createSlice({
       localStorage.setItem('userName', action.payload.userName);
     }
   },
+  // handle different state for fetchUser and updateUser thunk
   extraReducers: (builder) => {
     builder
       .addCase(fetchUserProfile.pending, (state) => {
@@ -115,7 +116,8 @@ const userSlice = createSlice({
 export const updateUserProfile = createAsyncThunk(
   'user/updateUserProfile',
   async (updatedProfileData, thunkAPI) => {
-    const state = thunkAPI.getState();
+    // access state & token
+    const state = thunkAPI.getState(); // access global state
     const token = state.auth.token;
 
     try {

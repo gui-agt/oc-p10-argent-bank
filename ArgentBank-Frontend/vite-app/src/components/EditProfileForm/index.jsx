@@ -7,6 +7,7 @@ import PropTypes from 'prop-types';
 const EditProfileForm = ({ onSave, onCancel }) => {
   // access data from store
   const { firstName, lastName, userName } = useSelector((state) => state.user.profile);
+  
   const dispatch = useDispatch();
 
   // local state to manage username edit
@@ -17,7 +18,7 @@ const EditProfileForm = ({ onSave, onCancel }) => {
     setEditedUserName(e.target.value);
   };
 
-  // Function to save update
+  // Function to save update in store
   const handleSave = () => {
     dispatch(updateUserProfile({ userName: editedUserName }));
     onCancel();

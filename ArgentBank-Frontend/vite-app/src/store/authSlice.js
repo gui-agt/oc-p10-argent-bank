@@ -51,9 +51,9 @@ const authSlice = createSlice({
     error: null
   },
   reducers: {
-    // reset token and authentication state id disconnected
+    // reset token and authentication state if disconnected
     logOut: (state) => {
-      state.token = null;
+      state.token = null; // reset toekn
       state.isAuthenticated = false;
 
       localStorage.removeItem('token');
@@ -64,6 +64,7 @@ const authSlice = createSlice({
       }
     }
   },
+  // handle synchrone login action
   extraReducers: (builder) => {
     builder
       .addCase(logIn.pending, (state) => {

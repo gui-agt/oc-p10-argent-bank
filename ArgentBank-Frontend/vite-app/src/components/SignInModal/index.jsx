@@ -11,9 +11,11 @@ const SignInModal = () => {
   const [password, setPassword] = useState('');
   const [rememberMe, setRememberMe] = useState(false);
 
+  // hooks redux
   const dispatch = useDispatch();
-  const navigate = useNavigate();
   const { isAuthenticated, error, status } = useSelector((state) => state.auth);
+
+  const navigate = useNavigate();
 
   // handle form submission
   const handleSubmit = (e) => {
